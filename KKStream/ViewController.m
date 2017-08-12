@@ -73,7 +73,7 @@
     bannerScrollView = [self.view viewWithTag:6];
     //bannerScrollView.contentSize = CGSizeMake(MAXFLOAT, 0);
     //bannerScrollView.backgroundColor = [UIColor orangeColor];
-    [bannerScrollView setDelegate:self];
+    [bannerScrollView setDelegate:self.bannerScrollView.delegate];
     [bannerScrollView setScrollEnabled:YES];
     [bannerScrollView setShowsVerticalScrollIndicator:YES];
     [bannerScrollView setShowsHorizontalScrollIndicator:YES];
@@ -88,7 +88,7 @@
     bannerName3Label = [self.view viewWithTag:13];
     bannerName4Label = [self.view viewWithTag:14];
     
-    switch([imageArray count])
+    switch([imageArray2 count])
     {
         case 0:
             //
