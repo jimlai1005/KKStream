@@ -21,14 +21,12 @@
 @synthesize nameArray;
 @synthesize imageArray2;
 @synthesize nameArray2;
-@synthesize bannerScrollView;
 @synthesize bannerImage1Img;
 @synthesize bannerImage2Img;
 @synthesize bannerImage3Img;
 @synthesize bannerImage4Img;
 @synthesize bannerImage5Img;
 @synthesize bannerImage6Img;
-
 @synthesize bannerName1Label;
 @synthesize bannerName2Label;
 @synthesize bannerName3Label;
@@ -36,10 +34,9 @@
 @synthesize bannerName5Label;
 @synthesize bannerName6Label;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     UIImageView* imageImg = (UIImageView *) [self.view viewWithTag:1];
     UILabel * parkNameLabel = (UILabel *) [self.view viewWithTag:2];
     UILabel * nameLabel = (UILabel *) [self.view viewWithTag:3];
@@ -47,8 +44,6 @@
     UILabel * openTimeLabel = (UILabel *) [self.view viewWithTag:5];
     
     imageImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageString]]];
-    
-    
     parkNameLabel.text = [NSString stringWithFormat:@"%@",parkNameString];
     nameLabel.text = [NSString stringWithFormat:@"%@",nameString];
     introTextView.text = [NSString stringWithFormat:@"%@",introString];
@@ -56,18 +51,11 @@
     openTimeLabel.text = [NSString stringWithFormat:@"%@",openTimeString];
     self.navigationItem.title = [NSString stringWithFormat:@"%@",nameString];
 
-    
-    NSLog(@"%@",imageString);
-    NSLog(@"%@",parkNameString);
-    NSLog(@"%@",nameString);
-    NSLog(@"%@",openTimeString);
-    
     imageArray2 = [[NSMutableArray alloc]initWithArray:imageArray];
     nameArray2 = [[NSMutableArray alloc]initWithArray:nameArray];
     [imageArray2 removeObject:imageString];
     [nameArray2 removeObject:nameString];
     
-    //bannerScrollView = [self.view viewWithTag:6];
     bannerImage1Img = [self.view viewWithTag:7];
     bannerImage2Img = [self.view viewWithTag:8];
     bannerImage3Img = [self.view viewWithTag:9];
@@ -84,21 +72,17 @@
     switch([imageArray2 count])
     {
         case 0:
-            //
             break;
-            
         case 1:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerName1Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:0]];
             break;
-            
         case 2:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerImage2Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:1]]]]];
             bannerName1Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:0]];
             bannerName2Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:1]];
             break;
-            
         case 3:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerImage2Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:1]]]]];
@@ -107,7 +91,6 @@
             bannerName2Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:1]];
             bannerName3Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:2]];
             break;
-            
         case 4:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerImage2Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:1]]]]];
@@ -118,7 +101,6 @@
             bannerName3Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:2]];
             bannerName4Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:3]];
             break;
-    
         case 5:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerImage2Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:1]]]]];
@@ -131,7 +113,6 @@
             bannerName4Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:3]];
             bannerName5Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:4]];
             break;
-    
         default:
             bannerImage1Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:0]]]]];
             bannerImage2Img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [imageArray2 objectAtIndex:1]]]]];
@@ -146,15 +127,12 @@
             bannerName5Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:4]];
             bannerName6Label.text = [NSString stringWithFormat:@"%@", [nameArray2 objectAtIndex:5]];
             break;
-    
     }
-    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 
 @end

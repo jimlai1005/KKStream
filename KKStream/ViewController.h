@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
 @property (strong) NSString *imageString;
 @property (strong) NSString *parkNameString;
 @property (strong) NSString *nameString;
@@ -19,19 +18,17 @@
 @property (strong) NSMutableArray *nameArray;
 @property (strong) NSMutableArray *imageArray2;
 @property (strong) NSMutableArray *nameArray2;
-@property (strong) UIScrollView *bannerScrollView;
 @property (strong) UIImageView *bannerImage1Img;
 @property (strong) UIImageView *bannerImage2Img;
 @property (strong) UIImageView *bannerImage3Img;
 @property (strong) UIImageView *bannerImage4Img;
 @property (strong) UIImageView *bannerImage5Img;
 @property (strong) UIImageView *bannerImage6Img;
-@property (strong) UILabel * bannerName1Label;
-@property (strong) UILabel * bannerName2Label;
-@property (strong) UILabel * bannerName3Label;
-@property (strong) UILabel * bannerName4Label;
-@property (strong) UILabel * bannerName5Label;
-@property (strong) UILabel * bannerName6Label;
-
+@property (strong) UILabel *bannerName1Label;
+@property (strong) UILabel *bannerName2Label;
+@property (strong) UILabel *bannerName3Label;
+@property (strong) UILabel *bannerName4Label;
+@property (strong) UILabel *bannerName5Label;
+@property (strong) UILabel *bannerName6Label;
 @end
 

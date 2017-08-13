@@ -11,13 +11,10 @@
 #import "AppDelegate.h"
 
 @interface TableViewController : UITableViewController
-
 @property (strong,nonatomic) NSMutableArray *parkNameSet;
 @property (strong,nonatomic) NSMutableArray *parkNameArray;
 @property (strong,nonatomic) NSMutableArray *openTimeArray;
 @property (strong,nonatomic) NSMutableArray *nameArray;
 @property (strong,nonatomic) NSMutableArray *introArray;
 @property (strong,nonatomic) NSMutableArray *imageArray;
-
-
 @end
