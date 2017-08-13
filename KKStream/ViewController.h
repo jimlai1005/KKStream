@@ -24,18 +24,14 @@
 @property (strong) UIImageView *bannerImage2Img;
 @property (strong) UIImageView *bannerImage3Img;
 @property (strong) UIImageView *bannerImage4Img;
+@property (strong) UIImageView *bannerImage5Img;
+@property (strong) UIImageView *bannerImage6Img;
 @property (strong) UILabel * bannerName1Label;
 @property (strong) UILabel * bannerName2Label;
 @property (strong) UILabel * bannerName3Label;
 @property (strong) UILabel * bannerName4Label;
-
-typedef NS_ENUM(NSInteger, ScrollDirection) {
-    ScrollDirectionUnknow,
-    ScrollDirectionLeft,
-    ScrollDirectionRight
-};
-@property (nonatomic, assign) ScrollDirection scrollDirection;
-
+@property (strong) UILabel * bannerName5Label;
+@property (strong) UILabel * bannerName6Label;
 
 @end
 

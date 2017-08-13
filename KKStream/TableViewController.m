@@ -44,6 +44,8 @@
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
+    self.navigationItem.title = @"Opendata的圖片沒優化，請耐心等候下載...";
+
     [[session dataTaskWithURL:[NSURL URLWithString:urlAsString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         NSString *JSONString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -74,7 +76,6 @@
                             NSMutableArray *tempIntroArray = [[NSMutableArray alloc]init];
                             NSMutableArray *tempImageArray = [[NSMutableArray alloc]init];
 
-                            
                             for (NSDictionary *itemDic in itemArray)
                             {
                                 NSString *parkNameString = [itemDic objectForKey:@"ParkName"];
@@ -124,6 +125,8 @@
                 }
             }
             [self.tableView reloadData];
+        //重設bar title
+            self.navigationItem.title = @"Taipei Park Opendata";
         }] resume];
     //NSLog(@"Done!");
 }
@@ -164,7 +167,7 @@
     
     // Configure the cell...
     
-    cell.backgroundColor = [UIColor orangeColor];
+    //cell.backgroundColor = [UIColor orangeColor];
     //  cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
     
     UIImageView* imageImg = (UIImageView *) [cell viewWithTag:1];
